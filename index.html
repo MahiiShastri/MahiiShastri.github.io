@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahima Shastri - Web Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: #2980b9;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.5rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .experience-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .experience-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .company {
+            color: #3498db;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .duration {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .experience-item ul {
+            margin-left: 1rem;
+        }
+        
+        .experience-item li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+        
+        .education-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+        }
+        
+        .cta-section h2 {
+            border: none;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 0.5rem;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-img">MS</div>
+            <h1>Mahima Shastri</h1>
+            <p class="subtitle">Web Developer & Team Lead</p>
+            <div class="contact-info">
+                <a href="mailto:mahimashastri135@gmail.com">📧 mahimashastri135@gmail.com</a>
+                <a href="tel:+919409072159">📞 +91-9409072159</a>
+                <a href="https://www.linkedin.com/in/mahima-shastri-a87595192/" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/MahiiShastri/MahiiShastri.github.io" target="_blank">💻 GitHub</a>
+                <a href="https://www.youtube.com/@miss_glorysoul" target="_blank">🎬 Youtube</a>
+                <a href="https://omniscienthuman.blogspot.com" target="_blank">📰 Blogging</a>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>About Me</h2>
+            <p class="about-text">
+                Motivated and skilled web developer with hands-on experience in CRM integration, website development, and resolving complex technical challenges. Proven team leader with experience managing web development projects and cross-functional teams, endorsed by leadership at Midnight Digital Pvt. Ltd. & Sparrow Technology for exceptional performance. Dedicated problem-solver and fast learner with strong analytical skills, focused on delivering high-quality solutions and optimal user experience.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li>CRM Integration</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>Laravel</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Bootstrap</li>
+                        <li>Bulma</li>
+                        <li>jQuery</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>CMS(CMS dev, Wordpress)</li>
+                        <li>Campaign tracking</li>
+                        <li>resolving SSL / Server issues</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Team Leadership</li>
+                        <li>Project Management</li>
+                        <li>Problem Solving</li>
+                        <li>Critical Thinking</li>
+                        <li>Effective Communication</li>
+                        <li>Time Management</li>
+                        <li>Teamwork</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Work Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Product & Exhibition Manager</h3>
+                <p class="company">MAHIRAT</p>
+                <p class="duration">2024 - Present</p>
+                <ul>
+                    <li>Operating a small scale Family business named Mahirat</li>
+                    <li>Managed Wholesale, client requirements independently</li>
+                    <li>Managed end-to-end coordination</li>
+                    <li>Mahirat is a menufacturing a non-profitable unit which upskill & empowers other women and give job</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Jr. Web Developer (Team Lead)</h3>
+                <p class="company">Insomniacs Digital Pvt. Ltd.</p>
+                <p class="duration">2022 - 2024</p>
+                <ul>
+                    <li>Worked as a Team Leader for CRM integration and web development projects</li>
+                    <li>Provided client tech support and collaborated with cross-functional teams</li>
+                    <li>Troubleshot live website conflicts & development issues, SSL issues, real-time Leads issues like Tracker code, duplicate & invalid leads, campaign tracking, GTM issues</li>
+                    <li>Client communication regarding website development, lead & campaign requirements, and GTM integrations</li>
+                    <li>Co-ordinating with performance team & Pre-sales development team/Clients team</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Jr. Web Developer</h3>
+                <p class="company">Brikkin Martech Pvt. Ltd.</p>
+                <p class="duration">2022 - 2024</p>
+                <ul>
+                    <li>Experienced in developing microsites, corporate websites, CRMs, APIs and data binding solutions</li>
+                    <li>Proficient in JavaScript, jQuery, PHP, Laravel, HTML5, CSS (Bootstrap, Inline), and databases (SQL, MongoDB)</li>
+                    <li>Successfully implemented multiple CRM integration APIs</li>
+                    <li>Skilled in hosting management with cPanel, Plesk, and hPanel</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>R&D Software Developer Trainee</h3>
+                <p class="company">Sparrow Technology</p>
+                <p class="duration">2021 - 2022</p>
+                <ul>
+                    <li>Developed Web-App in C# and VC++</li>
+                    <li>One year of experience in R&D, Arduino programming using C++</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>B.E. in Electronics & Communication Engineering</h3>
+                <p class="company">Gujarat Technological University (2017 - 2021)</p>
+                <p><strong>CGPA:</strong> 7.81/10.0</p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Let's Work Together</h2>
+            <p>Ready to bring your web development projects to life? Let's connect and discuss how I can contribute to your team's success.</p>
+            <a href="mailto:mahimashastri135@gmail.com" class="btn">Get In Touch</a>
+            <a href="tel:+919409072159">Call me at +91 9409072159</a>
+            <a href="https://www.linkedin.com/in/mahima-shastri-a87595192/" class="btn" target="_blank">Connect on LinkedIn</a>
+        </section>
+    </div>
+</body>
+</html>
